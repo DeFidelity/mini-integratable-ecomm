@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'style/bootstrap.min.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop</title>
+
+</head>
+<body>
+    {% include 'shop/nav.html' %}
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    {% include 'shop/footer.html' %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'javascripts/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
